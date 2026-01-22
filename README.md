@@ -15,14 +15,16 @@ curl -fsSL https://pyenv.run | bash
 Add the following in ~/.bashrc, ~/.profile and ~/.bash_profile if the file exists
 ```shell
 for profile in ~/.bashrc, ~/.profile ~/.bash_profile
-if [ -f $profile ]
-then
-    echo 'export PYENV_ROOT="$HOME/.pyenv"' >> $profile
-    echo '[[ -d $PYENV_ROOT/bin ]] && export PATH="$PYENV_ROOT/bin:$PATH"' >> $profile
-    echo 'eval "$(pyenv init - bash)"' >> $profile
-else
-    echo $profile does not exists
-fi
+do
+    if [ -f $profile ]
+    then
+        echo 'export PYENV_ROOT="$HOME/.pyenv"' >> $profile
+        echo '[[ -d $PYENV_ROOT/bin ]] && export PATH="$PYENV_ROOT/bin:$PATH"' >> $profile
+        echo 'eval "$(pyenv init - bash)"' >> $profile
+    else
+        echo $profile does not exists
+    fi
+done
 ``
 
 ## Install build env
