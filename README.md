@@ -14,7 +14,7 @@ curl -fsSL https://pyenv.run | bash
 
 Add the following in ~/.bashrc, ~/.profile and ~/.bash_profile if the file exists
 ```shell
-for profile in ~/.bashrc, ~/.profile ~/.bash_profile
+for profile in ~/.bashrc ~/.profile ~/.bash_profile
 do
     if [ -f $profile ]
     then
