@@ -63,6 +63,12 @@ pyenv install 3.10
 pyenv global 3.10
 ```
 
+## Check installed versions
+
+```shell
+pyenv versions
+```
+
 ### Switch between Python versions
 
 pyenv shell <version> -- select just for current shell session
